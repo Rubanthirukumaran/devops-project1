@@ -2,7 +2,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      python: 3.11
+      python: 3.12
   build:
     commands:
       - pip install --upgrade pip
@@ -17,6 +17,7 @@ phases:
       - pylint $CODEBUILD_SRC_DIR/*.py
       - echo `$CODEBUILD_SRC_DIR`
       - pylint $CODEBUILD_SRC_DIR/project/*.py
+
 artifacts:
   files:
     - '**/*'
