@@ -12,15 +12,15 @@ phases:
       - pip install pylint
       - echo "Build started on `date`"
       - echo "Compiling the code"
-      - echo `$CODEBUILD_SRC_DIR`
+      - echo "$CODEBUILD_SRC_DIR"
 
   post_build:
     commands:
       - python --version
       - pylint $CODEBUILD_SRC_DIR/*.py
-      - echo `$CODEBUILD_SRC_DIR`
+      - echo "$CODEBUILD_SRC_DIR"
       - pylint $CODEBUILD_SRC_DIR/project/*.py
 
 artifacts:
   files:
-    - '**/*
+    - '**/*'
