@@ -20,7 +20,8 @@ phases:
       - python --version
       - pylint $CODEBUILD_SRC_DIR/*.py
       - echo "$CODEBUILD_SRC_DIR"
-      - pylint --load-plugins pylint_django $CODEBUILD_SRC_DIR/project/urls.py
+      - pylint $CODEBUILD_SRC_DIR/project/settings.py
+
 
 artifacts:
   files:
