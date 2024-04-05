@@ -14,12 +14,21 @@ phases:
       - echo "Compiling the code"
       - echo "$CODEBUILD_SRC_DIR"
 
+  # post_build:
+  #   commands:
+  #     - python --version
+  #     - pylint $CODEBUILD_SRC_DIR/*.py
+  #     - echo "$CODEBUILD_SRC_DIR"
+  #     - pylint $CODEBUILD_SRC_DIR/project/*.py
+      
   post_build:
     commands:
+      - export DJANGO_SETTINGS_MODULE=project.settings
       - python --version
       - pylint $CODEBUILD_SRC_DIR/*.py
       - echo "$CODEBUILD_SRC_DIR"
       - pylint $CODEBUILD_SRC_DIR/project/*.py
+
 
 artifacts:
   files:
