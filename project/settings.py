@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-fabqjd*8dk9gdxf9wqi^1=r&3xzy*3z0eksp2_42i$j771*h1!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["x23163836env.eba-m3ifumdc.eu-west-2.elasticbeanstalk.com"]
+ALLOWED_HOSTS = ["c5fa175591b542319a06f00577a2adc3.vfs.cloud9.eu-west-1.amazonaws.com","x23163836env.eba-m3ifumdc.eu-west-2.elasticbeanstalk.com"]
 
 
 # Application definition
@@ -129,4 +129,4 @@ MEDIA_ROOT = BASE_DIR / 'static/media'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-CSRF_TRUSTED_ORIGINS = ['https://x23163836env.eba-m3ifumdc.eu-west-2.elasticbeanstalk.com']
+CSRF_TRUSTED_ORIGINS = ['https://c5fa175591b542319a06f00577a2adc3.vfs.cloud9.eu-west-1.amazonaws.com','https://x23163836env.eba-m3ifumdc.eu-west-2.elasticbeanstalk.com']
